@@ -49,17 +49,18 @@ function updateItems() {
                 currentCardItem.querySelector('.discount').textContent = newDiscount;
 
                 const productId = i;
-                const productData = {
+
+                //sử dụng object để lưu lại -> rồi stringify nó thành string để localStorage
+                
+                const product = {
                     name: newName,
                     price: newPrice,
-                    discount: newDiscount
+                    discount: newDiscount,
+                    id: i
                 };
 
-                // localStorage chỉ lưu trữ dưới dạng string
-                // nên phải biến js onbject -> json string để localStorage hiểu và lưu trữ được
-                // còn vice versa thì chuyển lại bằng JSON.parse(....)
-                localStorage.setItem(`product-${productId}`, JSON.stringify(productData));
-
+                //localStorage chỉ lưu được string-> chuyển object kia thành string thì mới lưu và sử dụng lại ở html khác được
+                localStorage.setItem(`product-${productId}`, JSON.stringify(product));
                 updateOverlay.classList.remove("active");
             });
 

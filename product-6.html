@@ -265,5 +265,20 @@
         }
       }
     </style>
+
+     <script src="update-item.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', function(event) {
+        const productId = 6;
+        const productJSON = localStorage.getItem(`product-${productId}`);
+        const parseProduct = JSON.parse(productJSON);
+
+        if(parseProduct && parseProduct.id === productId) {
+          document.querySelector('.pd-title').textContent = parseProduct.name;
+          document.querySelector('.pd-price').textContent = parseProduct.price;
+          document.querySelector('.pd-acc-body').textContent = parseProduct.discount;
+        }
+      })
+    </script>
   </body>
 </html>
