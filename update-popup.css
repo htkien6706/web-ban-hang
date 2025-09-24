@@ -1,0 +1,116 @@
+.update-popup {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  width: 100%;
+  max-width: 360px;   /* nhỏ gọn hơn, không fix to quá */
+  max-height: 80vh;   /* chiếm tối đa 80% chiều cao màn hình */
+  overflow-y: auto;   /* nếu nội dung dài thì cuộn trong popup */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  animation: fadeIn 0.25s ease-out;
+  font-family: "Segoe UI", sans-serif;
+  z-index: 999999;
+}
+/* Title */
+.update-popup .popup-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+  color: #222;
+  letter-spacing: -0.3px;
+}
+
+/* Form group */
+.update-popup .form-group {
+  margin-bottom: 18px;
+}
+
+.update-popup .form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.update-popup .form-group input,
+.update-popup .form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  outline: none;
+  background: #fafafa;
+}
+
+.update-popup .form-group input:focus,
+.update-popup .form-group textarea:focus {
+  border-color: #ff7043; 
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(255, 112, 67, 0.25);
+}
+
+/* Price + Discount in one row */
+.update-popup .form-row {
+  display: flex;
+  gap: 14px;
+}
+
+.update-popup .form-row .form-group {
+  flex: 1;
+}
+
+/* Buttons */
+.update-popup .popup-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.update-popup .button {
+  padding: 11px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+/* Cancel */
+.update-popup .cancel-button {
+  background: #f3f3f3;
+  color: #333;
+}
+
+.update-popup .cancel-button:hover {
+  background: #e5e5e5;
+}
+
+/* Save */
+.update-popup .save-button {
+  background: linear-gradient(135deg, #ff9a3c, #ff5722);
+  color: white;
+  box-shadow: 0 4px 10px rgba(255, 87, 34, 0.3);
+}
+
+.update-popup .save-button:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
