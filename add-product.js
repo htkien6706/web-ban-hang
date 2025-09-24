@@ -16,6 +16,11 @@ function add_items() {
 
         saveButton.addEventListener('click', function(event) {
             event.stopPropagation();
+
+            //name- price- discount, description
+            const addedName = document.getElementById("add-name").value;
+            const addedPrice = document.getElementById("add-price").value;
+            const addedDiscount = document.getElementById("add-discount").value;
             
         })
 

@@ -3,6 +3,7 @@ body {
   margin-left: 300px;
   padding-bottom: 200px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: gray;
 }
 
 .product-lists {

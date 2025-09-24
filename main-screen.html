@@ -7,6 +7,32 @@
   <link rel="stylesheet" href="delete-popup.css" />
   <link rel="stylesheet" href="update-popup.css" />
 
+  <style> 
+    /* Style nút upload */
+.upload-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: orange;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.upload-btn:hover {
+  background: darkorange;
+}
+
+/* Tên file */
+#file-name {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+}
+
+  </style>
+
   <title>Web ban hang tu dong</title>
 </head>
 
@@ -458,6 +484,18 @@
         <label for="add-name">Product Name</label>
         <input type="text" id="add-name" placeholder="Enter product name" />
       </div>
+
+      <!-- mé quên cái này, để còn biết mà upload file ảnh nhé anh em -->
+      <div class="form-group">
+  <!-- Input file (ẩn đi) -->
+  <input type="file" id="add-image" accept="image/*" hidden>
+
+  <!-- Label sẽ thành nút bấm -->
+  <label for="add-image" class="upload-btn">📁 Upload Image</label>
+
+  <!-- Hiển thị tên file đã chọn -->
+  <span id="file-name">Chưa chọn ảnh</span>
+</div>
 
       <!-- nhóm Price + Discount -->
       <div class="form-row">
